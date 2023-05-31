@@ -1,38 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #000000;
+}
+
 .App {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+a:link,
+a:visited,
+a:active {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(132, 132, 132);
+}
+
+.details {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.result {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px;
+  max-width: 1000px;
+}
+
+.information {
+  width: 50%;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.informationText {
+  background-color: white;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.informationText a {
+  color: #d55140;
+  text-decoration: none;
+}
+
+.image {
+  width: 50%;
+}
+
+.image img {
+  border: 10px solid white;
+  margin: 20px;
+}
+
+.resultImages {
+  width: 100%;
+}
+
+.main {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.background {
+  background-image: url("https://lh3.googleusercontent.com/gShVRyvLLbwVB8jeIPghCXgr96wxTHaM4zqfmxIWRsUpMhMn38PwuUU13o1mXQzLMt5HFqX761u8Tgo4L_JG1XLATvw=s0");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  font-size: 4em;
+  font-family: "Patua One", cursive;
+  color: white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h2 {
+  font-size: 1.5em;
+  font-family: "Open Sans", sans-serif;
+  color: black;
+}
+
+h3 {
+  font-size: 1em;
+  font-family: "Open Sans", sans-serif;
+  color: black;
+}
+
+.main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.title {
+  display: flex;
+  justify-content: flex-start;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.titlesmall {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 1em;
+}
+
+.titlesmall h1 {
+  font-size: 2em;
+}
+
+.titlesmall a:hover {
+  color: #fff;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.searchInput {
+  width: 80vw;
+  max-width: 1000px;
+}
+
+input {
+  width: 100%;
+  height: 38px;
+  background-color: rgb(237, 237, 237);
+  padding: 5px;
+  border: none;
+  padding-left: 10px;
+}
+
+input:focus {
+  outline: solid 0px rgb(0, 0, 0);
+}
+
+select:focus {
+  outline: none;
+}
+
+::placeholder {
+  color: black;
+}
+
+button {
+  font-size: 15px;
+  background-color: #d55140;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  border: none;
+  height: 38px;
+  padding: 10px;
+}
+
+button:hover {
+  background-color: rgb(0, 0, 0);
+}
+
+button:active {
+  background-color: rgb(195, 195, 195);
+  color: rgb(255, 255, 255);
+}
+
+.search-input-container {
+  position: relative;
+  width: 100%;
+}
+
+.suggestions-dropdown {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+}
+
+.suggestion {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.suggestion:hover {
+  background-color: #f5f5f5;
+}
+
+[role="navigation"] {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-family: "Open Sans", sans-serif;
+  cursor: pointer;
+}
+
+.paging {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.paging a {
+  color: rgb(255, 255, 255);
+}
+
+.next a,
+.previous a {
+  color: rgb(255, 255, 255);
+}
+
+.selected a {
+  color: #d55140;
+  font-size: x-large;
+}
+
+@media screen and (max-width: 650px) {
+  .content {
+    max-width: 450px;
   }
-  to {
-    transform: rotate(360deg);
+  h1 {
+    font-size: 3.5em;
+  }
+  .title {
+    justify-content: center;
+  }
+  .searchInput {
+    width: 95vw;
+  }
+  .information {
+    width: 100%;
+    margin-top: 0px;
+  }
+  .image {
+    width: 100%;
+    padding: 15px;
+  }
+  .image img {
+    margin: 0px;
+  }
+  .result {
+    margin: 10px;
+  }
+  .informationText {
+    margin-top: 0px;
   }
 }
