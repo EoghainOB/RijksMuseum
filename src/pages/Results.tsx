@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AppContext } from "../AppContext";
 import { ContextType } from "../types";
 import Detail from "../components/Detail";
@@ -26,8 +26,10 @@ const Results = () => {
     setItemOffset(newOffset);
   };
 
-  const randomNumber = Math.floor(Math.random() * 11);
-  setBackgroundImage(data[randomNumber]?.webImage?.url);
+  useEffect(() => {
+    const randomNumber = Math.floor(Math.random() * 11);
+    setBackgroundImage(data[randomNumber]?.webImage?.url);
+  }, [data, setBackgroundImage]);
 
   return (
     <div

@@ -17,6 +17,24 @@ body {
   padding: 0;
 }
 
+h1 {
+  font-size: 4em;
+  font-family: "Patua One", cursive;
+  color: white;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-family: "Open Sans", sans-serif;
+  color: black;
+}
+
+h3 {
+  font-size: 1em;
+  font-family: "Open Sans", sans-serif;
+  color: black;
+}
+
 a:link,
 a:visited,
 a:active {
@@ -87,24 +105,6 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-h1 {
-  font-size: 4em;
-  font-family: "Patua One", cursive;
-  color: white;
-}
-
-h2 {
-  font-size: 1.5em;
-  font-family: "Open Sans", sans-serif;
-  color: black;
-}
-
-h3 {
-  font-size: 1em;
-  font-family: "Open Sans", sans-serif;
-  color: black;
 }
 
 .main {
