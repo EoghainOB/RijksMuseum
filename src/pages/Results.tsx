@@ -35,7 +35,6 @@ const Results = () => {
       style={{
         position: "fixed",
         backgroundSize: "100vw",
-        backgroundRepeat: "no-repeat",
         top: 0,
         left: 0,
         right: 0,
@@ -61,7 +60,7 @@ const Results = () => {
       {pageCount > 1 && (
         <div className="paging">
           <ReactPaginate
-            breakLabel="..."
+            breakLabel=".."
             nextLabel="Next>"
             onPageChange={handlePageClick}
             pageRangeDisplayed={1}
