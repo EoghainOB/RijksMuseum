@@ -1,46 +1,27 @@
-# Getting Started with Create React App
+## Rijksmaster - Rijksmuseum Image search
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+For this project I was asked to nake use of the Rijksmuseum API and create an application that incorporates search. The user can search well known painters and their work in the input field with suggestions taken from a list of popular artists and their artwork. This queries the API and returns the results on a results page, showing the work along with the title of the piece and a link to the page of that piece of art on the Rijksmuseum website.
 
-## Available Scripts
+### Desktop
+![RijksSearchDesktop](https://github.com/EoghainOB/RijksMuseum/assets/110406695/f1b2d2b6-57b7-4dc6-8631-dc9175bab1ca)
+![RijksResDesktop](https://github.com/EoghainOB/RijksMuseum/assets/110406695/efb832b1-4139-499a-9a2d-3d4f7b134eb6)
 
-In the project directory, you can run:
+### Mobile
+<img width="300" src="https://github.com/EoghainOB/RijksMuseum/assets/110406695/92a891a7-cb2b-4192-a462-ceff8837ab30">
+<img width="300" src="https://github.com/EoghainOB/RijksMuseum/assets/110406695/8f493864-7d7c-4f8a-971a-8f1d36c4d9ab">
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Installation
+- Clone the repository using `git clone`
+- Install the dependencies using `npm install`
+- Run the server using `npm start`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Technologies Used
+I chose `React` and `Typescript` as this is what I am mot familiar with. React with its component library allows me to use the same components in different pages, such as the search field and allows me to piece together the site in a modular way which i find great especially when you have short amount of time to work on a project and the direction you are going with layout and design changes. I also used `React-router-dom` for routing within the site as well as `Context` to avoid prop drilling and make the data available across the site.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+<div>
+    <img height=40 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"/>
+    <img height=40 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"/>
+    <img height=40 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
+    <img height=40 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
+</div>
