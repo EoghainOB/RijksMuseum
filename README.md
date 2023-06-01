@@ -17,7 +17,7 @@ For this project I was asked to nake use of the Rijksmuseum API and create an ap
 - Run the server using `npm start`
 
 ## Technologies Used
-I chose `React` and `Typescript` as this is what I am most familiar with. React with its components allows me to reuse them in different pages, such as the search field and allows me to piece together the site in a modular way which I find great, especially when you have short amount of time to work on a project and the direction you are going with layout and design changes. I also used `React-router-dom` for routing within the site as well as `Context` to avoid prop drilling and make the data available across the site. For fetching the data from the API i used `Axios` instead of the built in fetch function as it has automatic JSON parsing and built in error handling.
+I chose `React` and `Typescript` as this is what I am most familiar with. React with its components allows me to reuse them in different pages, such as the search field and allows me to piece together the site in a modular way which I find great. While not a reason, this is particularly useful when you have short amount of time to work on a project and the direction you are going with layout and design changes. I also used `React-router-dom` for routing within the site as well as `Context` to avoid prop drilling and make the data available across the site. For fetching the data from the API I used `Axios` instead of the built in fetch function as it has automatic JSON parsing and built in error handling.
 
 <div>
     <img height=40 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"/>
