@@ -25,3 +25,6 @@ I chose `React` and `Typescript` as this is what I am mot familiar with. React w
     <img height=40 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
     <img height=40 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
 </div>
+
+## Notes
+Normally I would have put the API key in a `env` file but for the sake of this task I left it in the endpoint URL
