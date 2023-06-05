@@ -1,35 +1,30 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { AppContext } from "../AppContext";
 import { ContextType } from "../types";
 import Detail from "../components/Detail";
 import Search from "../components/Search";
-import ReactPaginate from "react-paginate";
-import { useNavigate } from "react-router-dom";
+import Paging from "../components/Paging";
 
 const Results = () => {
-  const { data, backgroundImage, setBackgroundImage } = useContext(
-    AppContext
-  ) as ContextType;
+  const appContext = useContext(AppContext);
+  const { century, searchTerm, data, backgroundImage, setBackgroundImage } =
+    appContext as ContextType;
+
   const navigate = useNavigate();
   const handleHomeClick = () => {
     navigate("/");
-  };
-
-  const [itemOffset, setItemOffset] = useState<number>(0);
-  const [itemsPerPage] = useState<number>(10);
-
-  const pageCount = data.length / itemsPerPage;
-  const endOffset = itemOffset + itemsPerPage;
-
-  const handlePageClick = (event: any) => {
-    const newOffset = (event.selected * itemsPerPage) % data.length;
-    setItemOffset(newOffset);
   };
 
   useEffect(() => {
     const randomNumber = Math.floor(Math.random() * 11);
     setBackgroundImage(data[randomNumber]?.webImage?.url);
   }, [data, setBackgroundImage]);
+
+  useEffect(() => {
+    if (data[0]?.webImage?.url !== undefined)
+      document.getElementById("titlesmall")?.scrollIntoView();
+  }, [data]);
 
   return (
     <div
@@ -46,31 +41,31 @@ const Results = () => {
         overflow: "auto",
       }}
     >
-      <div className="searchInput">
-        <div className="titlesmall">
+      <div className="titleContainer">
+        <div className="titlesmall" id="titlesmall">
           <h1>
             <a href="/" onClick={handleHomeClick}>
               RijksMaster
             </a>
           </h1>
         </div>
-        <Search />
       </div>
-      {data.slice(itemOffset, endOffset).map((data, index) => (
-        <div key={index}>{data.webImage?.url && <Detail data={data} />}</div>
+      <div className="searchInput" id="searchInput">
+        <Search />
+        {data && searchTerm ? (
+          <div className="searchTerm">
+            <h3>Showing results for "{searchTerm}"</h3>
+          </div>
+        ) : (
+          <div className="searchTerm">
+            <h4>Showing results for "{century}th Century"</h4>
+          </div>
+        )}
+      </div>
+      {data.map((result, index) => (
+        <div key={index}>{result.hasImage && <Detail data={result} />}</div>
       ))}
-      {pageCount > 1 && (
-        <div className="paging">
-          <ReactPaginate
-            breakLabel=".."
-            nextLabel="Next>"
-            onPageChange={handlePageClick}
-            pageRangeDisplayed={1}
-            pageCount={Math.ceil(pageCount)}
-            previousLabel="<Prev"
-          />
-        </div>
-      )}
+      <Paging />
     </div>
   );
 };

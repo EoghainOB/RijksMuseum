@@ -7,6 +7,10 @@ const AppContext = createContext<ContextType | null>(null);
 const AppProvider = ({ children }: any) => {
   const [data, setData] = useState<IData[]>([]);
   const [backgroundImage, setBackgroundImage] = useState("");
+  const [page, setPage] = useState(1);
+  const [century, setCentury] = useState(0);
+  const [search, setSearch] = useState("" as string);
+  const [searchTerm, setSearchTerm] = useState("" as string);
 
   let searchSuggest = suggestions;
 
@@ -18,6 +22,14 @@ const AppProvider = ({ children }: any) => {
         searchSuggest,
         backgroundImage,
         setBackgroundImage,
+        page,
+        setPage,
+        search,
+        setSearch,
+        century,
+        setCentury,
+        setSearchTerm,
+        searchTerm,
       }}
     >
       {children}
