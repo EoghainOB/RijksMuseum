@@ -39,6 +39,7 @@ const Search = () => {
   };
 
   const handleSearch = (suggestion: string) => {
+    setData([]);
     setSearch(suggestion);
     setSearchTerm(suggestion);
     let updatedSearchTerm = suggestion.replace(/\s+/g, "+");
@@ -60,6 +61,7 @@ const Search = () => {
 
   const handleDateSearch = (century: number) => {
     if (century) {
+      setData([]);
       setCentury(century);
       axios
         .get(
@@ -80,6 +82,7 @@ const Search = () => {
   };
 
   useEffect(() => {
+    setData([]);
     search ? handleSearch(search) : handleDateSearch(century);
     // eslint-disable-next-line
   }, [page]);

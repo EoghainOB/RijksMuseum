@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AppContext } from "../AppContext";
 import { ContextType } from "../types";
@@ -8,18 +8,12 @@ import Paging from "../components/Paging";
 
 const Results = () => {
   const appContext = useContext(AppContext);
-  const { century, searchTerm, data, backgroundImage, setBackgroundImage } =
-    appContext as ContextType;
+  const { century, searchTerm, data } = appContext as ContextType;
 
   const navigate = useNavigate();
   const handleHomeClick = () => {
     navigate("/");
   };
-
-  useEffect(() => {
-    const randomNumber = Math.floor(Math.random() * 11);
-    setBackgroundImage(data[randomNumber]?.webImage?.url);
-  }, [data, setBackgroundImage]);
 
   useEffect(() => {
     if (data[0]?.webImage?.url !== undefined)
@@ -36,7 +30,7 @@ const Results = () => {
         left: 0,
         right: 0,
         bottom: 0,
-        backgroundImage: `linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)), url(${backgroundImage})`,
+        backgroundImage: `linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)))`,
         zIndex: -1,
         overflow: "auto",
       }}
@@ -62,9 +56,20 @@ const Results = () => {
           </div>
         )}
       </div>
-      {data.map((result, index) => (
-        <div key={index}>{result.hasImage && <Detail data={result} />}</div>
-      ))}
+      {data
+        //@ts-ignore
+        .sort((a, b) => a.index - b.index)
+        .map((result, index) => {
+          if (result.hasImage) {
+            return (
+              <div key={index}>
+                <Detail data={result} />
+              </div>
+            );
+          } else {
+            return null;
+          }
+        })}
       <Paging />
     </div>
   );

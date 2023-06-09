@@ -23,7 +23,7 @@ const Paging = () => {
 
   return (
     <>
-      {data.length > 9 && (
+      {data[0]?.webImage?.url !== undefined && (
         <div className="paging">
           <div className="pagingNav">
             {page === 1 ? (
