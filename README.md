@@ -3,12 +3,12 @@
 For this project I was asked to nake use of the Rijksmuseum API and create an application that incorporates search. The user can search well known painters and their work in the input field with suggestions taken from a list of popular artists and their artwork. This queries the API and returns the results on a results page, showing the work along with the title of the piece and a link to the page of that piece of art on the Rijksmuseum website.
 
 ### Desktop
-![RijksSearchDesktop](https://github.com/EoghainOB/RijksMuseum/assets/110406695/f1b2d2b6-57b7-4dc6-8631-dc9175bab1ca)
-![RijksResDesktop](https://github.com/EoghainOB/RijksMuseum/assets/110406695/efb832b1-4139-499a-9a2d-3d4f7b134eb6)
+![RijksSearchDesktop](https://github.com/EoghainOB/RijksMaster_Angular/assets/110406695/3c78c34c-375d-44e0-baa1-c4651db76bcb)
+![RijksResDesktop](https://github.com/EoghainOB/RijksMaster_Angular/assets/110406695/0f90c186-84d5-4159-8102-02e660615358)
 
 ### Mobile
-<img width="300" src="https://github.com/EoghainOB/RijksMuseum/assets/110406695/92a891a7-cb2b-4192-a462-ceff8837ab30">
-<img width="300" src="https://github.com/EoghainOB/RijksMuseum/assets/110406695/8f493864-7d7c-4f8a-971a-8f1d36c4d9ab">
+<img width="300" src="https://github.com/EoghainOB/RijksMaster_Angular/assets/110406695/a525f62d-0e4a-4a75-a8b1-2a90802e05ab">
+<img width="300" src="https://github.com/EoghainOB/RijksMaster_Angular/assets/110406695/b53f7801-841c-4ba4-9498-b02de3e50c7c">
 
 
 ## Installation
