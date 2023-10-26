@@ -1,6 +1,6 @@
 ## Rijksmaster - Rijksmuseum Image search
 
-For this project I was asked to nake use of the Rijksmuseum API and create an application that incorporates search. The user can search well known painters and their work in the input field with suggestions taken from a list of popular artists and their artwork. This queries the API and returns the results on a results page, showing the work along with the title of the piece and a link to the page of that piece of art on the Rijksmuseum website.
+For this project I was asked to make use of the Rijksmuseum API and create an application that incorporates search. The user can search well known painters and their work in the input field with suggestions taken from a list of popular artists and their artwork. This queries the API and returns the results on a results page, showing the work along with the title of the piece and a link to the page of that piece of art on the Rijksmuseum website.
 
 ### Desktop
 ![RijksSearchDesktop](https://github.com/EoghainOB/RijksMaster_Angular/assets/110406695/3c78c34c-375d-44e0-baa1-c4651db76bcb)
